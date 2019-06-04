@@ -9,7 +9,7 @@ class TestRecursion(unittest.TestCase):
         with open('./html_dict.json', 'r') as f:
             html_dict = json.load(f)
 
-        output = html_dict_search(html_dict, 'headline-item')
+        output = html_dict_search(html_dict, '.headline-item')
         expected_output = [
             {
                 "name": "li",
