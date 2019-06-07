@@ -17,10 +17,7 @@ class TestFileOperations(unittest.TestCase):
         numbers_and_squares(4, './data.txt')
         output = read_file('./data.txt')
         expected_output = """
-        1,1
-        2,4
-        3,9
-        4,16
+        1,1\n2,4\n3,9\n4,16\n
         """
         self.assertEqual(output.strip(), expected_output.strip())
 
