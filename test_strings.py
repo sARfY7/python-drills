@@ -27,7 +27,7 @@ class TestString(unittest.TestCase):
             output = first_10_characters(inp)
             self.assertEqual(output, expected_output)
 
-    def chars_4_through_10(self):
+    def test_chars_4_through_10(self):
         inputs_and_outputs = [
             ('abcd', ''),
             ('a', ''),
