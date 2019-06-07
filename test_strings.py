@@ -53,11 +53,14 @@ class TestString(unittest.TestCase):
 
     def test_words(self):
         inputs_and_outputs = [
-            ('', ''),
-            ('hello', 'hello'),
+            ('', []),
+            ('hello', ['hello']),
             ('simple is better than complex', ['simple', 'is', 'better', 'than', 'complex']),
             ('Explicit is better than implicit', ['Explicit', 'is', 'better', 'than', 'implicit']),
         ]
+        for inp, expected_output in inputs_and_outputs:
+            output = words(inp)
+            self.assertEqual(output, expected_output)
 
     def test_capitalize(self):
         inputs_and_outputs = [
