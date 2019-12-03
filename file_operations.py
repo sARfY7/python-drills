@@ -5,15 +5,22 @@ Close the file after each operation.
 
 
 def read_file(path):
-    pass
+    file = open(path, "r")
+    data = "".join(file.readlines())
+    file.close()
+    return data
 
 
 def write_to_file(path, s):
-    pass
+    file = open(path, "w")
+    file.write(s)
+    file.close()
 
 
 def append_to_file(path, s):
-    pass
+    file = open(path, "a")
+    file.write(s)
+    file.close()
 
 
 def numbers_and_squares(n, file_path):
@@ -26,4 +33,8 @@ def numbers_and_squares(n, file_path):
     2,4
     3,9
     """
-    pass
+    file = open(file_path, "w")
+    for i in range(1, n + 1):
+        string = str(i) + "," + str(i**2) + "\n"
+        file.write(string)
+    file.close()
